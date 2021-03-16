@@ -1,0 +1,53 @@
+{
+  "groups": {
+    "Basic": ["P1", "P2", "L3", "D2"],
+    "Core": ["L1", "L2", "D1", "D4"],
+    "Extra": ["P3", "L4", "L5"]
+  },
+  "thresholds": [
+    { "grade": "A", "Basic": 4, "Core": 4, "Extra": 3 },
+    { "grade": "A-", "Basic": 4, "Core": 3, "Extra": 2 },
+    { "grade": "B+", "Basic": 3, "Core": 3, "Extra": 2 },
+    { "grade": "B", "Basic": 3, "Core": 3, "Extra": 1 },
+    { "grade": "B-", "Basic": 3, "Core": 2, "Extra": 1 },
+    { "grade": "C+", "Basic": 3, "Core": 2, "Extra": 0 },
+    { "grade": "C", "Basic": 2, "Core": 2, "Extra": 0 },
+    { "grade": "C-", "Basic": 2, "Core": 1, "Extra": 0 },
+    { "grade": "D+", "Basic": 1, "Core": 1, "Extra": 0 },
+    { "grade": "D", "Basic": 1, "Core": 0, "Extra": 0 }
+  ],
+  "data": [
+    {
+      "name": "Joe Somebody",
+      "attempts": {
+        "P1": [2, 4],
+        "P2": [4],
+        "P3": [4],
+        "L1": [3],
+        "L2": [2, 2],
+        "L3": [4],
+        "L4": [4],
+        "L5": [4],
+        "D1": [4],
+        "D2": [],
+        "D4": []
+      },
+      "target": "A"
+    },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" },
+    { "name": "", "attempts": {}, "target": "A" }
+  ]
+}

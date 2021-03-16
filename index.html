@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastery Based Grading</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <section class="student">
+    <h2>Joe Somebody</h2>
+    <section class="group">
+      <header>
+        <h3>Basic</h3>
+        <div class="group-total">3</div>
+      </header>
+      <section class="objectives">
+        <div class="objective">
+          <header>
+            <h4>S1</h4>
+            <div class="objective-total">4</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">1</li>
+            <li class="attempt">3</li>
+            <li class="attempt">4</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>S2</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">0</li>
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>J1</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>S1</h4>
+            <div class="objective-total">4</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">1</li>
+            <li class="attempt">3</li>
+            <li class="attempt">4</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>S2</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">0</li>
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>J1</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section class="group">
+      <header>
+        <h3>Core</h3>
+        <div class="group-total">2</div>
+      </header>
+      <section class="objectives">
+        <div class="objective">
+          <header>
+            <h4>S1</h4>
+            <div class="objective-total">4</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">1</li>
+            <li class="attempt">3</li>
+            <li class="attempt">4</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>S2</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">0</li>
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>J1</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section class="group">
+      <header>
+        <h3>Extra</h3>
+        <div class="group-total">1</div>
+      </header>
+      <section class="objectives">
+        <div class="objective">
+          <header>
+            <h4>S1</h4>
+            <div class="objective-total">4</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">1</li>
+            <li class="attempt">3</li>
+            <li class="attempt">4</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>S2</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">0</li>
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+        <div class="objective">
+          <header>
+            <h4>J1</h4>
+            <div class="objective-total">3</div>
+          </header>
+          <ul class="attempts">
+            <li class="attempt">3</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </section>
+  <table id="thresholds">
+    <thead>
+      <tr>
+        <th>Grade</th>
+        <th class="right-align">Basic</th>
+        <th>Core</th>
+        <th>Extra</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>A-</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>B+</td>
+        <td>3</td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr class="target">
+        <td>B</td>
+        <td>3</td>
+        <td>3</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>B-</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>C+</td>
+        <td>3</td>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>C-</td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>D+ </td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>D </td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

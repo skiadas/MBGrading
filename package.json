@@ -1,0 +1,21 @@
+{
+  "name": "MBGrading",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "description": "Mastery Based Grading website",
+  "main": "app.js",
+  "author": "Charilaos Skiadas",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7"
+  }
+}

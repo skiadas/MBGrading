@@ -1,0 +1,124 @@
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  padding: 0.5em;
+  display: flex;
+}
+
+.student {
+  flex: 3 0 auto;
+  height: fit-content;
+}
+
+#thresholds {
+  flex: 1 1 auto;
+}
+
+#thresholds {
+  margin-left: 1em;
+  padding: 1em 0.2em;
+  border: 1px solid black;
+  border-radius: 1em;
+  width: fit-content;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#thresholds td,
+#thresholds th {
+  padding: 0.1em 0.2em;
+}
+
+#thresholds td:not(:first-of-type),
+#thresholds th:not(:first-of-type) {
+  text-align: right;
+}
+
+#thresholds td:first-of-type {
+  padding-left: 0.5em;
+}
+
+#thresholds td:last-of-type {
+  padding-right: 0.5em;
+}
+
+#thresholds tr.target td {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+}
+
+.student {
+  border: 1px solid black;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.student > h2 {
+  text-align: center;
+}
+
+.group {
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-areas: "header main";
+  grid-template-columns: 1fr 2fr;
+}
+
+.group > header {
+  grid-area: "header";
+  border-right: 1px solid black;
+  text-align: center;
+  font-size: 130%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.group .objectives {
+  grid-area: "main";
+}
+
+.objectives {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.objective {
+  display: flex;
+  flex-direction: row;
+}
+
+.objective > header {
+  padding: 0.1em 0.2em;
+  flex: 0 0 2em;
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid black;
+  justify-content: space-between;
+}
+
+.objective ul {
+  padding: 0.1em 0.4em;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.objective ul li {
+  text-align: center;
+  width: 2em;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastery Based Grading</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <section class="student">
+    <h2>{{name}}</h2>
+    {{#each groups}}
+    <section class="group">
+      <header>
+        <h3>{{name}}</h3>
+        <div class="group-total">{{total}}</div>
+      </header>
+      <section class="objectives">
+        {{#each objectives}}
+        <div class="objective">
+          <header>
+            <h4>{{name}}</h4>
+            <div class="objective-total">{{max attempts}}</div>
+          </header>
+          <ul class="attempts">
+            {{#each attempts}}
+            <li class="attempt">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        {{/each}}
+      </section>
+    </section>
+    {{/each}}
+  </section>
+  <table id="thresholds">
+    <thead>
+      <tr>
+        <th>Grade</th>
+        {{#each groups}}
+        <th>{{name}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each thresholds}}
+      <tr{{#if (eq grade ../target)}} class="target" {{/if}}>
+        {{#with this as |threshold|}}
+        <td>{{grade}}</td>
+        {{#each ../groups}}
+        <td>{{lookup threshold name}}</td>
+        {{/each}}
+        {{/with}}
+        </tr>
+        {{/each}}
+    </tbody>
+  </table>
+</body>
+
+</html>
