@@ -11,7 +11,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "node test.js"
   },
   "dependencies": {
