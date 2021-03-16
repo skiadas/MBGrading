@@ -1,10 +1,18 @@
 // const express = require("express");
 import express from "express";
+import cookieParser from "cookie-parser";
+import formidableMiddleware from "express-formidable";
 import * as path from "path";
+import { addChatNeeds } from "./chat.js";
 
 const __dirname = path.resolve();
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
+
+app.use(formidableMiddleware()); // form processing
+app.use(cookieParser()); // cookie processing
+app.set("views", "./views");
+app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -42,6 +50,7 @@ app.get("/info", (req, res) => {
   });
 });
 
+addChatNeeds(app);
 // app.get("/:filename", (req, res) => {
 //   res.sendFile(path.join(__dirname, req.params.filename));
 // });
