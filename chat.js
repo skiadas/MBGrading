@@ -28,7 +28,7 @@ function registerUser(req, res) {
 }
 
 function handleBasicChatPage(req, res) {
-  return res.render("messages", { messages: messages.reverse() });
+  return res.render("messages", { messages: [...messages].reverse() });
 }
 
 function handleMessagePost(req, res) {

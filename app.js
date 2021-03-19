@@ -9,6 +9,7 @@ const __dirname = path.resolve();
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.static("static"));
 app.use(formidableMiddleware()); // form processing
 app.use(cookieParser()); // cookie processing
 app.set("views", "./views");
@@ -20,14 +21,17 @@ app.get("/", (req, res) => {
 app.get("/home", (req, res) => {
   res.send("Hello World from home!");
 });
-app.get("/index.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("/index.html", (req, res) => {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
+// app.get("/style.css", (req, res) => {
+//   res.sendFile(path.join(__dirname, "style.css"));
+// });
 app.get("/download", (req, res) => {
-  res.download(path.join(__dirname, "index.html"));
+  res.download(path.join(__dirname, "static", "index.html"), "hello.html");
 });
-app.get("/notfound", (req, res) => {
-  res.status(404).end();
+app.get("/notfound/:code", (req, res) => {
+  res.status(parseInt(req.query.code)).end();
 });
 app.get("/json", (req, res) => {
   res.json({ hi: "there" });
