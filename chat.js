@@ -28,13 +28,19 @@ function registerUser(req, res) {
 }
 
 function handleBasicChatPage(req, res) {
-  return res.render("messages", { messages: [...messages].reverse() });
+  const lastUpdate = parseInt(req.cookies.lastUpdated);
+  res.cookie("lastUpdated", Date.now());
+  return res.render("messages", {
+    messages: [...messages].reverse(),
+    lastUpdate,
+  });
 }
 
 function handleMessagePost(req, res) {
   const message = req.fields.message;
   const sender = res.locals.user;
-  messages.push({ message, sender });
+  const timestamp = Date.now();
+  messages.push({ message, sender, timestamp });
   return res.redirect(req.path);
 }
 

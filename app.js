@@ -4,6 +4,9 @@ import cookieParser from "cookie-parser";
 import formidableMiddleware from "express-formidable";
 import * as path from "path";
 import { addChatNeeds } from "./chat.js";
+import pkg from "date-fns";
+const { formatDistanceToNow } = pkg;
+import hbs from "hbs";
 
 const __dirname = path.resolve();
 const app = express();
@@ -14,6 +17,13 @@ app.use(formidableMiddleware()); // form processing
 app.use(cookieParser()); // cookie processing
 app.set("views", "./views");
 app.set("view engine", "hbs");
+
+hbs.registerHelper("formatDate", function (timestamp) {
+  return formatDistanceToNow(timestamp);
+});
+hbs.registerHelper("newerThan", function (date1, date2) {
+  return date1 > date2;
+});
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

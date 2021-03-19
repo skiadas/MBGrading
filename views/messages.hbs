@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat messages</title>
+  <style>
+    .new {
+      background-color: blue;
+      transition: background-color 2sec;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,7 +23,8 @@
     {{#if messages}}
     <ul>
       {{#each messages}}
-      <li>{{message}} (by {{sender}})</li>
+      <li {{#if (newerThan timestamp ../lastUpdate)}}class="new" {{/if}}>{{message}} (by {{sender}}) <span
+          class="timestamp">{{formatDate timestamp}}</span></li>
       {{/each}}
     </ul>
     {{else}}
